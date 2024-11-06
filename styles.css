@@ -6,12 +6,75 @@ html, body {
 }
 
 body {
-    background-color:cornflowerblue;
+    background-color:blueviolet;
+    font-family: 'Press Start 2P', cursive;  /* Cambié la fuente para que esté en toda la página */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Evita que la página haga scroll */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre cada sección */
+}
+
+.dificultad-snake {
+    margin-top: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
+    color: white;
+    font-size: 14px;
+}
+
+#best-score, #current-score {
+    display: block;
+    margin: 0;
 }
 
 canvas {
-    border: 1px solid white;
+    border: 2px solid white;
+    border-radius: 5px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s ease; 
 }
+
+
+@media (max-width: 600px) {
+    .container {
+        gap: 15px; 
+    }
+
+    select {
+        width: 100%;
+        max-width: 300px; 
+    }
+
+    canvas {
+        width: 100%;
+        max-width: 400px; 
+    }
+}
+
+

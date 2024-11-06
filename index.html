@@ -8,9 +8,29 @@
     <link rel="shortcut icon" href="assets/faviconsnake.png" type="image/x-icon">
 </head>
 <body>
-    <canvas width="400" height="400" id="game"></canvas>
+    <div class="container">
+        <h1>SNAKE GAME</h1>
+        <div class="dificultad-snake">
+            <h2>SELECCIONE LA DIFICULTAD ANTES DE INICIAR EL JUEGO.</h2>
+            <p>(luego de seleccionar la dificultad, clickee la pantalla del juego.)</p>
+            <select id="difficulty">
+                <option value="easy">Fácil</option>
+                <option value="medium">Media</option>
+                <option value="hard">Difícil</option>
+            </select>
+        </div>
+
+        <div class="scoreboard">
+            <span id="best-score">Mejor: 0 pts</span>
+            <span id="current-score">Actual: 0 pts</span>
+        </div>
+
+        <canvas width="400" height="400" id="game"></canvas>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
